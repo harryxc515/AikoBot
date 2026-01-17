@@ -5,10 +5,10 @@ let db;
 
 export async function connectDB() {
   const uri = process.env.MONGO_URI;
-  const dbName = process.env.DB_NAME || "Cluster0";
+  const dbName = process.env.DB_NAME || "botdb";
 
   if (!uri) {
-    console.log("⚠️ MONGO_URI not found, running without DB (RAM mode).");
+    console.log("⚠️ MONGO_URI not found, running without DB (RAM mode)." );
     return null;
   }
 
@@ -16,7 +16,7 @@ export async function connectDB() {
   await client.connect();
   db = client.db(dbName);
 
-  console.log("✅ MongoDB Connected");
+  console.log("✅ MongoDB Connected" );
   return db;
 }
 
