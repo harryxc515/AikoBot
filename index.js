@@ -19,6 +19,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OWNER_ID = Number(process.env.OWNER_ID || config.ownerId || 0);
 const LOG_CHANNEL_ID = process.env.LOG_CHANNEL_ID;
+const port = process.env.PORT || 4000 
 
 if (!BOT_TOKEN) {
   console.log("❌ BOT_TOKEN missing");
